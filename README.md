@@ -8,7 +8,7 @@ Hi 👋 My name is Muhammed Özel
 *   🧠  I'm learning React
 *   🤝  I'm open to collaborating on getting investment
 *   ⚡  I'm currently monetized an app, now our firm developing 3 different apps
-### Skills
+###Skills
 <p align="left">
   
                                 <a href="https://dart.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dart-colored.svg" width="36" height="36" alt="Dart" /></a>
@@ -32,7 +32,7 @@ Hi 👋 My name is Muhammed Özel
                                 <a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" /></a>
                     </p>
                     
-### Socials
+###Socials
                   
                   
                 <p align="left">
