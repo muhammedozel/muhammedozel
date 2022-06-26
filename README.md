@@ -1,13 +1,13 @@
 Hi 👋 My name is Muhammed Özel
 ==============================
 
-* 🌍  I'm based in Turkey
+* 🌍  I'm based in Istanbul
 * 🖥️  See my portfolio at [Muhammed Özel](http://muhammedozel.com.tr)
 * ✉️  You can contact me at [muhammed@sakasoft.com.tr](mailto:muhammed@sakasoft.com.tr)
 * 🚀  I'm currently working on [Broccoli, mediWORLD, tourIST](http://sakasoft.com.tr)
 * 🧠  I'm learning React
 * 🤝  I'm open to collaborating on getting investment
-* ⚡  I'm currently monetized an app, now our firm developing 3 different apps
+* ⚡  I've currently monetized an app, now our firm developing 3 different apps
 
 ### Skills
 
