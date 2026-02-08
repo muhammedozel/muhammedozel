@@ -6,8 +6,6 @@ Hi 👋 My name is Muhammed Özel
 * ✉️  You can contact me at [muhammed@sakasoft.com.tr](mailto:muhammed@sakasoft.com.tr)
 * 🚀  I'm currently working on just [Gymplus](http://gymplusai.com)
 * 🧠  I'm creating fullstack app on JavaScript Frameworks
-* 🤝  I'm open to collaborating on getting investment
-* ⚡  I've currently monetized an app, now our firm developing 3 different apps
 
 ### Skills
 
@@ -47,9 +45,7 @@ Hi 👋 My name is Muhammed Özel
 </a>
 </p>
 
-### Badges
-
-<b>My GitHub Stats</b>
+### My GitHub Stats
 
 <a href="http://www.github.com/muhammedozel">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=muhammedozel&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
