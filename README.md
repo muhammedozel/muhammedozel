@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="https://komarev.com/ghpvc/?username=muhammedozel&style=flat-square&color=0891B2&label=Profile+Views" alt="Profile Views" />
+
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=1000&pause=1500&color=0891B2&center=true&vCenter=true&random=false&width=600&lines=Hi+%F0%9F%91%8B+I'm+Muhammed+%C3%96zel;Founder+%7C+Builder+%7C+Developer;Building+Gymplus+AI+%F0%9F%9A%80;React+%E2%80%A2+Nest.js+%E2%80%A2+React+Native" alt="Typing SVG" />
 
 </div>
@@ -42,8 +44,8 @@
 </p>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,expo,figma&theme=dark" /><br/>
-  <sub><b>Mobile</b> — React Native / Expo</sub>
+  <img src="https://skillicons.dev/icons?i=react,androidstudio,figma&theme=dark" /><br/>
+  <sub><b>Mobile & Design</b> — React Native / Expo / Figma</sub>
 </p>
 
 <p align="center">
