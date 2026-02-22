@@ -32,40 +32,24 @@
 <h3 align="center">Tech Stack</h3>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,dart,react,nextjs,vue,nuxt,tailwind,materialui,redux,bootstrap,html,css,nodejs,fastapi,graphql,mysql,flutter,figma&theme=dark&perline=10" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,vue,nuxt,tailwind,materialui,redux&theme=dark" /><br/>
+  <sub><b>Frontend</b> — React / Next.js / Vue / Nuxt.js / TailwindCSS</sub>
 </p>
 
-<table align="center">
-  <tr>
-    <td valign="top" width="33%">
-      <h4 align="center">Frontend</h4>
-      <ul>
-        <li>React / Next.js</li>
-        <li>Vue.js / Nuxt.js</li>
-        <li>TailwindCSS / Material UI</li>
-        <li>Redux / State Management</li>
-      </ul>
-    </td>
-    <td valign="top" width="33%">
-      <h4 align="center">Backend & Database</h4>
-      <ul>
-        <li>Node.js / TypeScript</li>
-        <li>FastAPI / GraphQL</li>
-        <li>RESTful API Design</li>
-        <li>MySQL</li>
-      </ul>
-    </td>
-    <td valign="top" width="33%">
-      <h4 align="center">Mobile & Design</h4>
-      <ul>
-        <li>Flutter / Dart</li>
-        <li>Figma / UI-UX</li>
-        <li>Responsive Design</li>
-        <li>Cross-platform Development</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=nodejs,nestjs,ts,graphql,postgresql,mongodb,redis&theme=dark" /><br/>
+  <sub><b>Backend</b> — Node.js / Nest.js / TypeScript / GraphQL</sub>
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,expo,figma&theme=dark" /><br/>
+  <sub><b>Mobile</b> — React Native / Expo</sub>
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=docker,aws,vercel,githubactions,nginx,linux&theme=dark" /><br/>
+  <sub><b>DevOps</b> — Docker / AWS / Vercel / Railway / GitHub Actions</sub>
+</p>
 
 ---
 
