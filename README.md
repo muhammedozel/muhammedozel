@@ -21,7 +21,7 @@
 </td>
 <td width="40%" align="center" valign="middle">
 
-<img src="https://github.com/muhammedozel.png" width="250" style="border-radius: 50%;" alt="Muhammed Özel" />
+<img src="https://images.weserv.nl/?url=github.com/muhammedozel.png&h=250&w=250&fit=cover&mask=circle" width="250" alt="Muhammed Özel" />
 
 </td>
 </tr>
@@ -73,10 +73,10 @@
 
 <div align="center">
 
-<img height="170" src="https://streak-stats.demolab.com?user=muhammedozel&theme=tokyonight&hide_border=true&border_radius=12" alt="GitHub Streak" />
-<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=muhammedozel&theme=tokyonight" alt="GitHub Stats" />
+<img height="180" src="https://streak-stats.demolab.com?user=muhammedozel&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakNum=c9d1d9&currStreakLabel=58a6ff&sideNums=c9d1d9&sideLabels=c9d1d9&dates=8b949e&hide_border=true&border_radius=12" alt="GitHub Streak" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=muhammedozel&theme=github_dark" alt="GitHub Stats" />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=muhammedozel&bg_color=1c1917&color=ffffff&line=0891b2&point=ffffff&area_color=0891b2&area=true&hide_border=true" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=muhammedozel&theme=github_dark" alt="Contribution Graph" />
 
 </div>
 
