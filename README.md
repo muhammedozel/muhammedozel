@@ -62,8 +62,19 @@
 <img height="180" src="https://streak-stats.demolab.com?user=muhammedozel&background=45%2C0d1117%2C161b22&ring=58a6ff&fire=ff6e40&currStreakNum=ffffff&currStreakLabel=58a6ff&sideNums=c9d1d9&sideLabels=8b949e&dates=6e7681&stroke=30363d&hide_border=false&border_radius=16&card_width=500&date_format=j%20M%5B%20Y%5D&type=svg" alt="GitHub Streak" />
 <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=muhammedozel&theme=github_dark" alt="GitHub Stats" />
 
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=muhammedozel&theme=github_dark" alt="Top Languages by Repo" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=muhammedozel&theme=github_dark" alt="Top Languages by Commit" />
+
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=muhammedozel&theme=github_dark" alt="Contribution Graph" />
 
+</div>
+
+---
+
+<h3 align="center">Contribution Activity</h3>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=muhammedozel&bg_color=0d1117&color=58a6ff&line=0891B2&point=ffffff&area_color=0891B2&area=true&hide_border=true" alt="Activity Graph" />
 </div>
 
 ---
@@ -74,4 +85,10 @@
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://www.twitter.com/arti9muhendis)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](http://www.instagram.com/muhammedozel)
 
+</div>
+
+---
+
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" alt="Dev Quote" />
 </div>
