@@ -59,7 +59,7 @@
 
 <div align="center">
 
-<img height="180" src="https://streak-stats.demolab.com?user=muhammedozel&background=0d1117&ring=58a6ff&fire=ff6e40&currStreakNum=ffffff&currStreakLabel=58a6ff&sideNums=c9d1d9&sideLabels=8b949e&dates=6e7681&hide_border=true&border_radius=12&date_format=j%20M%5B%20Y%5D&type=svg" alt="GitHub Streak" />
+<img height="180" src="https://streak-stats.demolab.com?user=muhammedozel&background=45%2C0d1117%2C161b22&ring=58a6ff&fire=ff6e40&currStreakNum=ffffff&currStreakLabel=58a6ff&sideNums=c9d1d9&sideLabels=8b949e&dates=6e7681&stroke=30363d&hide_border=false&border_radius=16&card_width=500&date_format=j%20M%5B%20Y%5D&type=svg" alt="GitHub Streak" />
 <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=muhammedozel&theme=github_dark" alt="GitHub Stats" />
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=muhammedozel&theme=github_dark" alt="Contribution Graph" />
