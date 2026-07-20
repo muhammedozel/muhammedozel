@@ -364,7 +364,14 @@ function chartRaw(days: DayCount[]): Line {
 
       const peakIdx = days.reduce((best, d, i) => (d.count > days[best].count ? i : best), 0);
       const peak = pts[peakIdx];
-      const peakTextX = Math.min(Math.max(peak.x, x0 + 14), x0 + cw - 14);
+
+      // Her günün katkı sayısı — çakışmasın diye zikzak yükseklikte küçük etiketler
+      const dayLabels = pts
+        .map((p, i) => {
+          const yLab = Math.max(p.y - (i % 2 === 0 ? 8 : 19), yTop + 9);
+          return `<text x="${p.x.toFixed(1)}" y="${yLab.toFixed(1)}" fill="${C.key}" font-size="8.5" text-anchor="middle">${days[i].count}</text>`;
+        })
+        .join("\n          ");
 
       const grid = [0.25, 0.5, 0.75]
         .map((f) => {
@@ -399,7 +406,10 @@ function chartRaw(days: DayCount[]): Line {
         <circle cx="${peak.x.toFixed(1)}" cy="${peak.y.toFixed(1)}" r="3.5" fill="${C.cmd}" opacity="0">
           <animate attributeName="opacity" from="0" to="1" begin="${(begin + 1.4).toFixed(2)}s" dur="0.3s" fill="freeze"/>
         </circle>
-        <text x="${peakTextX.toFixed(1)}" y="${(peak.y - 8).toFixed(1)}" fill="${C.val}" font-size="11" font-weight="600" text-anchor="middle" opacity="0">${days[peakIdx].count}<animate attributeName="opacity" from="0" to="1" begin="${(begin + 1.4).toFixed(2)}s" dur="0.3s" fill="freeze"/></text>
+        <g opacity="0">
+          ${dayLabels}
+          <animate attributeName="opacity" from="0" to="1" begin="${(begin + 1.4).toFixed(2)}s" dur="0.4s" fill="freeze"/>
+        </g>
         ${labels}
       </g>`;
     },
