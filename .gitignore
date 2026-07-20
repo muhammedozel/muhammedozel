@@ -1,1 +1,4 @@
 CLAUDE.md
+.superpowers/
+node_modules/
+.DS_Store

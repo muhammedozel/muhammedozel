@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="419" viewBox="0 0 620 419" role="img" aria-label="muhammedozel GitHub stats terminal">
+  <defs>
+    <clipPath id="card"><rect x="0.5" y="0.5" width="619" height="418" rx="10"/></clipPath>
+    <clipPath id="type1"><rect x="20" y="47" width="0" height="21"><animate attributeName="width" values="4.0;11.9;19.8;27.7;35.6;43.5;51.4;59.3;67.2;75.1;83.0;90.9;98.8;106.7;114.6;122.5;130.4" calcMode="discrete" begin="0.40s" dur="0.72s" fill="freeze"/></rect></clipPath>
+    <clipPath id="type2"><rect x="20" y="110" width="0" height="21"><animate attributeName="width" values="4.0;11.9;19.8;27.7;35.6;43.5;51.4;59.3;67.2;75.1;83.0;90.9;98.8" calcMode="discrete" begin="1.39s" dur="0.54s" fill="freeze"/></rect></clipPath>
+    <clipPath id="type3"><rect x="20" y="173" width="0" height="21"><animate attributeName="width" values="4.0;11.9;19.8;27.7;35.6;43.5;51.4;59.3;67.2;75.1;83.0;90.9;98.8" calcMode="discrete" begin="2.20s" dur="0.54s" fill="freeze"/></rect></clipPath>
+    <clipPath id="type4"><rect x="20" y="299" width="0" height="21"><animate attributeName="width" values="4.0;11.9;19.8;27.7;35.6;43.5;51.4;59.3;67.2;75.1;83.0;90.9;98.8;106.7;114.6;122.5;130.4;138.3;146.2" calcMode="discrete" begin="3.37s" dur="0.81s" fill="freeze"/></rect></clipPath>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="620" height="419" fill="#0d1117"/>
+    <rect width="620" height="34" fill="#111823"/>
+    <line x1="0" y1="34" x2="620" y2="34" stroke="#1c2530" stroke-width="1"/>
+    <circle cx="25" cy="17" r="5.5" fill="#ff5f56"/><circle cx="43" cy="17" r="5.5" fill="#ffbd2e"/><circle cx="61" cy="17" r="5.5" fill="#27c93f"/>
+    <text x="78" y="21" fill="#4d5a6a" font-size="11">muhammedozel@github ~ stats</text>
+  </g>
+  <rect x="0.5" y="0.5" width="619" height="418" rx="10" fill="none" stroke="#1c2530" stroke-width="1"/>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="13">
+    <g clip-path="url(#type1)"><text x="20" y="63" xml:space="preserve"><tspan fill="#22d3ee">$ </tspan><tspan fill="#22d3ee">whoami --stats</tspan></text></g>
+    <g opacity="0"><text x="20" y="84" xml:space="preserve"><tspan fill="#8b949e">commits_this_year: </tspan><tspan fill="#e6edf3" font-weight="600">7,061</tspan><tspan fill="#8b949e">   </tspan><tspan fill="#8b949e">stars: </tspan><tspan fill="#e6edf3" font-weight="600">0</tspan><tspan fill="#8b949e">   </tspan><tspan fill="#8b949e">prs: </tspan><tspan fill="#e6edf3" font-weight="600">112</tspan><tspan fill="#8b949e">   </tspan><tspan fill="#8b949e">issues: </tspan><tspan fill="#e6edf3" font-weight="600">728</tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.27s" dur="0.25s" fill="freeze"/></g>
+    <g clip-path="url(#type2)"><text x="20" y="126" xml:space="preserve"><tspan fill="#22d3ee">$ </tspan><tspan fill="#22d3ee">git streak</tspan></text></g>
+    <g opacity="0"><text x="20" y="147" xml:space="preserve"><tspan fill="#8b949e">current: </tspan><tspan fill="#0891B2" font-weight="600">201 days</tspan><tspan fill="#e6edf3"> 🔥</tspan><tspan fill="#8b949e">   longest: </tspan><tspan fill="#e6edf3" font-weight="600">201 days</tspan><tspan fill="#8b949e">   total: </tspan><tspan fill="#e6edf3" font-weight="600">10,177</tspan></text><animate attributeName="opacity" from="0" to="1" begin="2.08s" dur="0.25s" fill="freeze"/></g>
+    <g clip-path="url(#type3)"><text x="20" y="189" xml:space="preserve"><tspan fill="#22d3ee">$ </tspan><tspan fill="#22d3ee">lang --top</tspan></text></g>
+    <g opacity="0"><text x="20" y="210" xml:space="preserve"><tspan fill="#e6edf3">TypeScript  </tspan><tspan fill="#0891B2">██████░░░░░░</tspan><tspan fill="#8b949e">  51.7%</tspan></text><animate attributeName="opacity" from="0" to="1" begin="2.89s" dur="0.25s" fill="freeze"/></g>
+    <g opacity="0"><text x="20" y="231" xml:space="preserve"><tspan fill="#e6edf3">EJS         </tspan><tspan fill="#0891B2">█████░░░░░░░</tspan><tspan fill="#8b949e">  38.6%</tspan></text><animate attributeName="opacity" from="0" to="1" begin="3.01s" dur="0.25s" fill="freeze"/></g>
+    <g opacity="0"><text x="20" y="252" xml:space="preserve"><tspan fill="#e6edf3">JavaScript  </tspan><tspan fill="#0891B2">█░░░░░░░░░░░</tspan><tspan fill="#8b949e">  6.5%</tspan></text><animate attributeName="opacity" from="0" to="1" begin="3.13s" dur="0.25s" fill="freeze"/></g>
+    <g opacity="0"><text x="20" y="273" xml:space="preserve"><tspan fill="#e6edf3">Shell       </tspan><tspan fill="#0891B2">░░░░░░░░░░░░</tspan><tspan fill="#8b949e">  1.5%</tspan></text><animate attributeName="opacity" from="0" to="1" begin="3.25s" dur="0.25s" fill="freeze"/></g>
+    <g clip-path="url(#type4)"><text x="20" y="315" xml:space="preserve"><tspan fill="#22d3ee">$ </tspan><tspan fill="#22d3ee">git log --recent</tspan></text></g>
+    <g opacity="0"><text x="20" y="336" xml:space="preserve"><tspan fill="#e6edf3">muhammedozel        </tspan><tspan fill="#6e7681">12d ago</tspan></text><animate attributeName="opacity" from="0" to="1" begin="4.33s" dur="0.25s" fill="freeze"/></g>
+    <g opacity="0"><text x="20" y="357" xml:space="preserve"><tspan fill="#e6edf3">nestjs-boilerplate  </tspan><tspan fill="#6e7681">12mo ago</tspan></text><animate attributeName="opacity" from="0" to="1" begin="4.45s" dur="0.25s" fill="freeze"/></g>
+    <g opacity="0"><text x="20" y="399" xml:space="preserve"><tspan fill="#22d3ee">$ </tspan></text><animate attributeName="opacity" from="0" to="1" begin="4.57s" dur="0.1s" fill="freeze"/></g>
+    <rect x="35.8" y="387" width="7.9" height="15" fill="#22d3ee" opacity="0"><animate attributeName="opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" begin="4.67s" dur="1.06s" repeatCount="indefinite"/></rect>
+  </g>
+</svg>
