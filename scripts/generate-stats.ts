@@ -1,23 +1,19 @@
 /**
  * GitHub GraphQL API'den profil istatistiklerini çekip terminal görünümlü
- * animasyonlu bir SVG kartı üretir: assets/terminal-stats.svg
+ * animasyonlu SVG kartları üretir:
+ *   assets/terminal-stats.svg     — genel istatistikler + streak + diller + son repolar
+ *   assets/terminal-activity.svg  — son 30 günün katkı grafiği
+ *   assets/terminal-quote.svg     — günlük dönen geliştirici sözü ($ fortune --dev)
  *
  * Çalıştırma: GITHUB_TOKEN=<token> npx tsx scripts/generate-stats.ts
  */
 
-// Harici bağımlılık (@types/node) kullanmamak için minimal ambient tanımlar
-declare const process: {
-  env: Record<string, string | undefined>;
-  exit(code?: number): never;
-};
-declare module "node:fs/promises" {
-  export function writeFile(path: string, data: string, encoding: "utf8"): Promise<void>;
-  export function mkdir(path: string, options: { recursive: boolean }): Promise<string | undefined>;
-}
+import { C, W, PAD, CHAR_W, renderTerminal, fmt } from "./terminal";
+import type { Line, Seg } from "./terminal";
+import { pickQuote } from "./quotes";
 
 const LOGIN = process.env.GH_LOGIN ?? "muhammedozel";
 const TOKEN = process.env.GITHUB_TOKEN;
-const OUT_PATH = "assets/terminal-stats.svg";
 
 // ---------- GraphQL ----------
 
@@ -129,6 +125,11 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 
 // ---------- Veri toplama ----------
 
+interface DayCount {
+  date: string;
+  count: number;
+}
+
 interface Stats {
   commitsThisYear: number;
   stars: number;
@@ -139,6 +140,7 @@ interface Stats {
   totalContributions: number;
   languages: { name: string; pct: number }[];
   recentRepos: { name: string; pushedAt: string }[];
+  last30: DayCount[];
 }
 
 function isoDate(d: Date): string {
@@ -196,6 +198,15 @@ async function collectStats(): Promise<Stats> {
     cursor.setUTCDate(cursor.getUTCDate() - 1);
   }
 
+  // Son 30 gün (bugün dahil)
+  const last30: DayCount[] = [];
+  for (let i = 29; i >= 0; i--) {
+    const d = new Date(now);
+    d.setUTCDate(d.getUTCDate() - i);
+    const date = isoDate(d);
+    last30.push({ date, count: dayCounts.get(date) ?? 0 });
+  }
+
   // Yıldızlar ve dil dağılımı (fork'suz, public, sahip olunan repolar)
   let stars = 0;
   const langBytes = new Map<string, number>();
@@ -226,50 +237,11 @@ async function collectStats(): Promise<Stats> {
     totalContributions,
     languages,
     recentRepos,
+    last30,
   };
 }
 
-// ---------- SVG üretimi ----------
-
-const C = {
-  bg: "#0d1117",
-  border: "#1c2530",
-  headerBg: "#111823",
-  headerText: "#4d5a6a",
-  cmd: "#22d3ee",
-  key: "#8b949e",
-  val: "#e6edf3",
-  accent: "#0891B2",
-  dim: "#6e7681",
-};
-
-const W = 620;
-const PAD = 20;
-const HEADER_H = 34;
-const LINE_H = 21;
-const FONT_SIZE = 13;
-const CHAR_W = 7.9; // 13px monospace yaklaşık karakter genişliği
-const TOP_PAD = 14;
-const BOTTOM_PAD = 14;
-
-interface Seg {
-  t: string;
-  color: string;
-  bold?: boolean;
-}
-
-interface Line {
-  kind: "cmd" | "out" | "blank" | "cursor";
-  segs: Seg[];
-}
-
-function esc(s: string): string {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
-
-function fmt(n: number): string {
-  return n.toLocaleString("en-US");
-}
+// ---------- Kart içerikleri ----------
 
 function relTime(iso: string): string {
   const diffMs = Date.now() - new Date(iso).getTime();
@@ -293,17 +265,17 @@ function cmd(text: string): Line {
   return { kind: "cmd", segs: [{ t: "$ ", color: C.cmd }, { t: text, color: C.cmd }] };
 }
 
-function kv(pairs: [string, string][], valColor: string = C.val): Line {
+function kv(pairs: [string, string][]): Line {
   const segs: Seg[] = [];
   pairs.forEach(([k, v], i) => {
     if (i > 0) segs.push({ t: "   ", color: C.key });
     segs.push({ t: `${k}: `, color: C.key });
-    segs.push({ t: v, color: valColor, bold: true });
+    segs.push({ t: v, color: C.val, bold: true });
   });
   return { kind: "out", segs };
 }
 
-function buildLines(s: Stats): Line[] {
+function buildStatsLines(s: Stats): Line[] {
   const lines: Line[] = [];
 
   lines.push(cmd("whoami --stats"));
@@ -315,7 +287,7 @@ function buildLines(s: Stats): Line[] {
       ["issues", fmt(s.issues)],
     ]),
   );
-  lines.push({ kind: "blank", segs: [] });
+  lines.push({ kind: "blank" });
 
   lines.push(cmd("git streak"));
   lines.push({
@@ -330,7 +302,7 @@ function buildLines(s: Stats): Line[] {
       { t: fmt(s.totalContributions), color: C.val, bold: true },
     ],
   });
-  lines.push({ kind: "blank", segs: [] });
+  lines.push({ kind: "blank" });
 
   lines.push(cmd("lang --top"));
   const nameWidth = Math.max(...s.languages.map((l) => l.name.length), 1);
@@ -344,7 +316,7 @@ function buildLines(s: Stats): Line[] {
       ],
     });
   }
-  lines.push({ kind: "blank", segs: [] });
+  lines.push({ kind: "blank" });
 
   lines.push(cmd("git log --recent"));
   const repoWidth = Math.max(...s.recentRepos.map((r) => r.name.length), 1);
@@ -357,97 +329,130 @@ function buildLines(s: Stats): Line[] {
       ],
     });
   }
-  lines.push({ kind: "blank", segs: [] });
+  lines.push({ kind: "blank" });
 
-  lines.push({ kind: "cursor", segs: [{ t: "$ ", color: C.cmd }] });
+  lines.push({ kind: "cursor" });
   return lines;
 }
 
-function lineText(line: Line): string {
-  return line.segs.map((s) => s.t).join("");
+function chartRaw(days: DayCount[]): Line {
+  const chH = 110;
+  const topGap = 12;
+  const labelGap = 28;
+  return {
+    kind: "raw",
+    height: topGap + chH + labelGap,
+    holdSeconds: 1.8,
+    render: (yTop, begin) => {
+      const x0 = PAD + 2;
+      const cw = W - 2 * PAD - 4;
+      const yBase = yTop + topGap + chH;
+      const max = Math.max(...days.map((d) => d.count), 1);
+      const stepX = cw / (days.length - 1);
+      const pts = days.map((d, i) => ({
+        x: x0 + i * stepX,
+        y: yBase - (d.count / max) * (chH - 10),
+      }));
+
+      const lineP = pts.map((p, i) => `${i === 0 ? "M" : "L"}${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(" ");
+      const areaP = `${lineP} L${(x0 + cw).toFixed(1)} ${yBase.toFixed(1)} L${x0.toFixed(1)} ${yBase.toFixed(1)} Z`;
+
+      let len = 0;
+      for (let i = 1; i < pts.length; i++) {
+        len += Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y);
+      }
+
+      const peakIdx = days.reduce((best, d, i) => (d.count > days[best].count ? i : best), 0);
+      const peak = pts[peakIdx];
+      const peakTextX = Math.min(Math.max(peak.x, x0 + 14), x0 + cw - 14);
+
+      const grid = [0.25, 0.5, 0.75]
+        .map((f) => {
+          const gy = (yBase - f * (chH - 10)).toFixed(1);
+          return `<line x1="${x0}" y1="${gy}" x2="${x0 + cw}" y2="${gy}" stroke="${C.border}" stroke-width="1" stroke-dasharray="3 5" opacity="0.6"/>`;
+        })
+        .join("\n        ");
+
+      const dateLabel = (iso: string): string =>
+        new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          timeZone: "UTC",
+        });
+      const mid = Math.floor(days.length / 2);
+      const labels = [0, mid, days.length - 1]
+        .map((i) => {
+          const anchor = i === 0 ? "start" : i === days.length - 1 ? "end" : "middle";
+          return `<text x="${pts[i].x.toFixed(1)}" y="${(yBase + 19).toFixed(1)}" fill="${C.dim}" font-size="11" text-anchor="${anchor}">${dateLabel(days[i].date)}</text>`;
+        })
+        .join("\n        ");
+
+      return `<g>
+        ${grid}
+        <line x1="${x0}" y1="${yBase.toFixed(1)}" x2="${x0 + cw}" y2="${yBase.toFixed(1)}" stroke="${C.border}" stroke-width="1"/>
+        <path d="${areaP}" fill="${C.accent}" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.16" begin="${(begin + 0.9).toFixed(2)}s" dur="0.5s" fill="freeze"/>
+        </path>
+        <path d="${lineP}" fill="none" stroke="${C.cmd}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="${len.toFixed(0)}" stroke-dashoffset="${len.toFixed(0)}">
+          <animate attributeName="stroke-dashoffset" from="${len.toFixed(0)}" to="0" begin="${begin.toFixed(2)}s" dur="1.4s" fill="freeze"/>
+        </path>
+        <circle cx="${peak.x.toFixed(1)}" cy="${peak.y.toFixed(1)}" r="3.5" fill="${C.cmd}" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" begin="${(begin + 1.4).toFixed(2)}s" dur="0.3s" fill="freeze"/>
+        </circle>
+        <text x="${peakTextX.toFixed(1)}" y="${(peak.y - 8).toFixed(1)}" fill="${C.val}" font-size="11" font-weight="600" text-anchor="middle" opacity="0">${days[peakIdx].count}<animate attributeName="opacity" from="0" to="1" begin="${(begin + 1.4).toFixed(2)}s" dur="0.3s" fill="freeze"/></text>
+        ${labels}
+      </g>`;
+    },
+  };
 }
 
-function renderSvg(s: Stats): string {
-  const lines = buildLines(s);
-  const height = HEADER_H + TOP_PAD + lines.length * LINE_H + BOTTOM_PAD;
+function buildActivityLines(s: Stats): Line[] {
+  const total = s.last30.reduce((a, d) => a + d.count, 0);
+  const max = Math.max(...s.last30.map((d) => d.count), 0);
+  const active = s.last30.filter((d) => d.count > 0).length;
+  const avg = total / s.last30.length;
 
-  const textEls: string[] = [];
-  const defEls: string[] = [];
-  let t = 0.4; // animasyon zaman imleci (saniye)
-  let clipId = 0;
+  return [
+    cmd("git activity --last 30d"),
+    chartRaw(s.last30),
+    kv([
+      ["max", `${fmt(max)}/day`],
+      ["avg", `${avg.toFixed(1)}/day`],
+      ["active", `${active}/${s.last30.length} days`],
+    ]),
+    { kind: "blank" },
+    { kind: "cursor" },
+  ];
+}
 
-  lines.forEach((line, i) => {
-    if (line.kind === "blank") return;
-    const y = HEADER_H + TOP_PAD + i * LINE_H + 15;
-
-    const tspans = line.segs
-      .map(
-        (seg) =>
-          `<tspan fill="${seg.color}"${seg.bold ? ' font-weight="600"' : ""}>${esc(seg.t)}</tspan>`,
-      )
-      .join("");
-
-    if (line.kind === "cmd") {
-      // Daktilo efekti: clipPath içindeki rect'in genişliği karakter karakter büyür
-      const chars = lineText(line).length;
-      const dur = Math.min(Math.max(chars * 0.045, 0.4), 1.3);
-      const widths: string[] = [];
-      for (let cIdx = 0; cIdx <= chars; cIdx++) widths.push((cIdx * CHAR_W + 4).toFixed(1));
-      clipId++;
-      defEls.push(
-        `<clipPath id="type${clipId}"><rect x="${PAD}" y="${y - 16}" width="0" height="${LINE_H}">` +
-          `<animate attributeName="width" values="${widths.join(";")}" calcMode="discrete" begin="${t.toFixed(2)}s" dur="${dur.toFixed(2)}s" fill="freeze"/>` +
-          `</rect></clipPath>`,
-      );
-      textEls.push(
-        `<g clip-path="url(#type${clipId})"><text x="${PAD}" y="${y}" xml:space="preserve">${tspans}</text></g>`,
-      );
-      t += dur + 0.15;
-    } else if (line.kind === "out") {
-      textEls.push(
-        `<g opacity="0"><text x="${PAD}" y="${y}" xml:space="preserve">${tspans}</text>` +
-          `<animate attributeName="opacity" from="0" to="1" begin="${t.toFixed(2)}s" dur="0.25s" fill="freeze"/></g>`,
-      );
-      t += 0.12;
-    } else if (line.kind === "cursor") {
-      const cursorX = PAD + 2 * CHAR_W;
-      textEls.push(
-        `<g opacity="0"><text x="${PAD}" y="${y}" xml:space="preserve">${tspans}</text>` +
-          `<animate attributeName="opacity" from="0" to="1" begin="${t.toFixed(2)}s" dur="0.1s" fill="freeze"/></g>`,
-      );
-      textEls.push(
-        `<rect x="${cursorX}" y="${y - 12}" width="${CHAR_W}" height="15" fill="${C.cmd}" opacity="0">` +
-          `<animate attributeName="opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" begin="${(t + 0.1).toFixed(2)}s" dur="1.06s" repeatCount="indefinite"/></rect>`,
-      );
+function wrap(text: string, maxChars: number): string[] {
+  const words = text.split(" ");
+  const lines: string[] = [];
+  let current = "";
+  for (const word of words) {
+    if (current.length + word.length + 1 > maxChars && current.length > 0) {
+      lines.push(current);
+      current = word;
+    } else {
+      current = current.length > 0 ? `${current} ${word}` : word;
     }
-  });
+  }
+  if (current.length > 0) lines.push(current);
+  return lines;
+}
 
-  const dots = [
-    { cx: PAD + 5, fill: "#ff5f56" },
-    { cx: PAD + 23, fill: "#ffbd2e" },
-    { cx: PAD + 41, fill: "#27c93f" },
-  ]
-    .map((d) => `<circle cx="${d.cx}" cy="${HEADER_H / 2}" r="5.5" fill="${d.fill}"/>`)
-    .join("");
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${height}" viewBox="0 0 ${W} ${height}" role="img" aria-label="${LOGIN} GitHub stats terminal">
-  <defs>
-    <clipPath id="card"><rect x="0.5" y="0.5" width="${W - 1}" height="${height - 1}" rx="10"/></clipPath>
-    ${defEls.join("\n    ")}
-  </defs>
-  <g clip-path="url(#card)">
-    <rect width="${W}" height="${height}" fill="${C.bg}"/>
-    <rect width="${W}" height="${HEADER_H}" fill="${C.headerBg}"/>
-    <line x1="0" y1="${HEADER_H}" x2="${W}" y2="${HEADER_H}" stroke="${C.border}" stroke-width="1"/>
-    ${dots}
-    <text x="${PAD + 58}" y="${HEADER_H / 2 + 4}" fill="${C.headerText}" font-size="11">${LOGIN}@github ~ stats</text>
-  </g>
-  <rect x="0.5" y="0.5" width="${W - 1}" height="${height - 1}" rx="10" fill="none" stroke="${C.border}" stroke-width="1"/>
-  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="${FONT_SIZE}">
-    ${textEls.join("\n    ")}
-  </g>
-</svg>
-`;
+function buildQuoteLines(now: Date): Line[] {
+  const quote = pickQuote(now);
+  const maxChars = Math.floor((W - 2 * PAD) / CHAR_W) - 2;
+  const lines: Line[] = [cmd("fortune --dev")];
+  const wrapped = wrap(`"${quote.text}"`, maxChars);
+  for (const l of wrapped) {
+    lines.push({ kind: "out", segs: [{ t: l, color: C.val }] });
+  }
+  lines.push({ kind: "out", segs: [{ t: `  — ${quote.author}`, color: C.dim }] });
+  lines.push({ kind: "blank" });
+  lines.push({ kind: "cursor" });
+  return lines;
 }
 
 // ---------- main ----------
@@ -457,13 +462,43 @@ async function main(): Promise<void> {
     console.error("GITHUB_TOKEN ortam değişkeni gerekli");
     process.exit(1);
   }
+  const now = new Date();
   const stats = await collectStats();
   console.log(JSON.stringify(stats, null, 2));
-  const svg = renderSvg(stats);
+
+  const cards: { path: string; svg: string }[] = [
+    {
+      path: "assets/terminal-stats.svg",
+      svg: renderTerminal({
+        title: `${LOGIN}@github ~ stats`,
+        ariaLabel: `${LOGIN} GitHub stats terminal`,
+        lines: buildStatsLines(stats),
+      }),
+    },
+    {
+      path: "assets/terminal-activity.svg",
+      svg: renderTerminal({
+        title: `${LOGIN}@github ~ activity`,
+        ariaLabel: `${LOGIN} son 30 gün katkı grafiği`,
+        lines: buildActivityLines(stats),
+      }),
+    },
+    {
+      path: "assets/terminal-quote.svg",
+      svg: renderTerminal({
+        title: `${LOGIN}@github ~ fortune`,
+        ariaLabel: "Günün geliştirici sözü",
+        lines: buildQuoteLines(now),
+      }),
+    },
+  ];
+
   const { writeFile, mkdir } = await import("node:fs/promises");
   await mkdir("assets", { recursive: true });
-  await writeFile(OUT_PATH, svg, "utf8");
-  console.log(`Yazıldı: ${OUT_PATH} (${svg.length} bayt)`);
+  for (const card of cards) {
+    await writeFile(card.path, card.svg, "utf8");
+    console.log(`Yazıldı: ${card.path} (${card.svg.length} bayt)`);
+  }
 }
 
 main().catch((err: unknown) => {

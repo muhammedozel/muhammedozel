@@ -68,21 +68,19 @@
 <h3 align="center">Contribution Activity</h3>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=muhammedozel&bg_color=0d1117&color=58a6ff&line=0891B2&point=ffffff&area_color=0891B2&area=true&hide_border=true" alt="Activity Graph" />
+  <img src="assets/terminal-activity.svg" alt="Contribution Activity" />
 </div>
 
 ---
 
 <div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammetozel)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://www.twitter.com/arti9muhendis)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](http://www.instagram.com/muhammedozel)
-
+  <a href="https://www.linkedin.com/in/muhammetozel"><img src="assets/badge-linkedin.svg" alt="LinkedIn" /></a>&nbsp;
+  <a href="https://www.twitter.com/arti9muhendis"><img src="assets/badge-twitter.svg" alt="Twitter" /></a>&nbsp;
+  <a href="http://www.instagram.com/muhammedozel"><img src="assets/badge-instagram.svg" alt="Instagram" /></a>
 </div>
 
 ---
 
 <div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" alt="Dev Quote" />
+  <img src="assets/terminal-quote.svg" alt="Dev Quote" />
 </div>
