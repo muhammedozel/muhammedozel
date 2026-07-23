@@ -13,8 +13,8 @@
   <rect x="0.5" y="0.5" width="619" height="166" rx="10" fill="none" stroke="#1c2530" stroke-width="1"/>
   <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="13">
     <g clip-path="url(#type1)"><text x="20" y="63" xml:space="preserve"><tspan fill="#22d3ee">$ </tspan><tspan fill="#22d3ee">fortune --dev</tspan></text></g>
-    <g opacity="0"><text x="20" y="84" xml:space="preserve"><tspan fill="#e6edf3">"Weeks of coding can save you hours of planning."</tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.23s" dur="0.25s" fill="freeze"/></g>
-    <g opacity="0"><text x="20" y="105" xml:space="preserve"><tspan fill="#6e7681">  — Unknown</tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.35s" dur="0.25s" fill="freeze"/></g>
+    <g opacity="0"><text x="20" y="84" xml:space="preserve"><tspan fill="#e6edf3">"Testing leads to failure, and failure leads to understanding."</tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.23s" dur="0.25s" fill="freeze"/></g>
+    <g opacity="0"><text x="20" y="105" xml:space="preserve"><tspan fill="#6e7681">  — Burt Rutan</tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.35s" dur="0.25s" fill="freeze"/></g>
     <g opacity="0"><text x="20" y="147" xml:space="preserve"><tspan fill="#22d3ee">$ </tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.47s" dur="0.1s" fill="freeze"/></g>
     <rect x="35.8" y="135" width="7.9" height="15" fill="#22d3ee" opacity="0"><animate attributeName="opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" begin="1.57s" dur="1.06s" repeatCount="indefinite"/></rect>
   </g>
