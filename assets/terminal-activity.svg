@@ -18,11 +18,11 @@
         <line x1="22" y1="141.0" x2="598" y2="141.0" stroke="#1c2530" stroke-width="1" stroke-dasharray="3 5" opacity="0.6"/>
         <line x1="22" y1="116.0" x2="598" y2="116.0" stroke="#1c2530" stroke-width="1" stroke-dasharray="3 5" opacity="0.6"/>
         <line x1="22" y1="191.0" x2="598" y2="191.0" stroke="#1c2530" stroke-width="1"/>
-        <path d="M22.0 183.7 L41.9 185.5 L61.7 183.7 L81.6 147.1 L101.4 173.3 L121.3 161.1 L141.2 174.5 L161.0 187.3 L180.9 183.1 L200.8 181.2 L220.6 158.1 L240.5 150.8 L260.3 91.6 L280.2 91.0 L300.1 127.6 L319.9 186.1 L339.8 186.1 L359.7 188.6 L379.5 189.8 L399.4 184.3 L419.2 169.7 L439.1 189.8 L459.0 190.4 L478.8 189.8 L498.7 168.4 L518.6 150.1 L538.4 117.8 L558.3 91.0 L578.1 175.1 L598.0 103.2 L598.0 191.0 L22.0 191.0 Z" fill="#0891B2" opacity="0">
+        <path d="M22.0 183.7 L41.9 185.5 L61.7 183.7 L81.6 147.1 L101.4 173.3 L121.3 161.1 L141.2 174.5 L161.0 187.3 L180.9 183.1 L200.8 181.2 L220.6 158.1 L240.5 150.8 L260.3 91.6 L280.2 91.0 L300.1 127.6 L319.9 186.1 L339.8 186.1 L359.7 188.6 L379.5 189.8 L399.4 184.3 L419.2 169.7 L439.1 189.8 L459.0 190.4 L478.8 189.8 L498.7 168.4 L518.6 150.1 L538.4 117.8 L558.3 91.0 L578.1 175.1 L598.0 102.0 L598.0 191.0 L22.0 191.0 Z" fill="#0891B2" opacity="0">
           <animate attributeName="opacity" from="0" to="0.16" begin="2.57s" dur="0.5s" fill="freeze"/>
         </path>
-        <path d="M22.0 183.7 L41.9 185.5 L61.7 183.7 L81.6 147.1 L101.4 173.3 L121.3 161.1 L141.2 174.5 L161.0 187.3 L180.9 183.1 L200.8 181.2 L220.6 158.1 L240.5 150.8 L260.3 91.6 L280.2 91.0 L300.1 127.6 L319.9 186.1 L339.8 186.1 L359.7 188.6 L379.5 189.8 L399.4 184.3 L419.2 169.7 L439.1 189.8 L459.0 190.4 L478.8 189.8 L498.7 168.4 L518.6 150.1 L538.4 117.8 L558.3 91.0 L578.1 175.1 L598.0 103.2" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="925" stroke-dashoffset="925">
-          <animate attributeName="stroke-dashoffset" from="925" to="0" begin="1.67s" dur="1.4s" fill="freeze"/>
+        <path d="M22.0 183.7 L41.9 185.5 L61.7 183.7 L81.6 147.1 L101.4 173.3 L121.3 161.1 L141.2 174.5 L161.0 187.3 L180.9 183.1 L200.8 181.2 L220.6 158.1 L240.5 150.8 L260.3 91.6 L280.2 91.0 L300.1 127.6 L319.9 186.1 L339.8 186.1 L359.7 188.6 L379.5 189.8 L399.4 184.3 L419.2 169.7 L439.1 189.8 L459.0 190.4 L478.8 189.8 L498.7 168.4 L518.6 150.1 L538.4 117.8 L558.3 91.0 L578.1 175.1 L598.0 102.0" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="926" stroke-dashoffset="926">
+          <animate attributeName="stroke-dashoffset" from="926" to="0" begin="1.67s" dur="1.4s" fill="freeze"/>
         </path>
         <circle cx="280.2" cy="91.0" r="3.5" fill="#22d3ee" opacity="0">
           <animate attributeName="opacity" from="0" to="1" begin="3.07s" dur="0.3s" fill="freeze"/>
@@ -57,7 +57,7 @@
           <text x="538.4" y="109.8" fill="#8b949e" font-size="8.5" text-anchor="middle">120</text>
           <text x="558.3" y="78.0" fill="#8b949e" font-size="8.5" text-anchor="middle">164</text>
           <text x="578.1" y="167.1" fill="#8b949e" font-size="8.5" text-anchor="middle">26</text>
-          <text x="598.0" y="84.2" fill="#8b949e" font-size="8.5" text-anchor="middle">144</text>
+          <text x="598.0" y="83.0" fill="#8b949e" font-size="8.5" text-anchor="middle">146</text>
           <animate attributeName="opacity" from="0" to="1" begin="3.07s" dur="0.4s" fill="freeze"/>
         </g>
         <text x="22.0" y="210.0" fill="#6e7681" font-size="11" text-anchor="start">Aug 6</text>
