@@ -13,9 +13,9 @@
   <rect x="0.5" y="0.5" width="619" height="187" rx="10" fill="none" stroke="#1c2530" stroke-width="1"/>
   <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="13">
     <g clip-path="url(#type1)"><text x="20" y="63" xml:space="preserve"><tspan fill="#22d3ee">$ </tspan><tspan fill="#22d3ee">fortune --dev</tspan></text></g>
-    <g opacity="0"><text x="20" y="84" xml:space="preserve"><tspan fill="#e6edf3">"Any fool can write code that a computer can understand. Good</tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.23s" dur="0.25s" fill="freeze"/></g>
-    <g opacity="0"><text x="20" y="105" xml:space="preserve"><tspan fill="#e6edf3">programmers write code that humans can understand."</tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.35s" dur="0.25s" fill="freeze"/></g>
-    <g opacity="0"><text x="20" y="126" xml:space="preserve"><tspan fill="#6e7681">  — Martin Fowler</tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.47s" dur="0.25s" fill="freeze"/></g>
+    <g opacity="0"><text x="20" y="84" xml:space="preserve"><tspan fill="#e6edf3">"There are only two hard things in Computer Science: cache invalidation</tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.23s" dur="0.25s" fill="freeze"/></g>
+    <g opacity="0"><text x="20" y="105" xml:space="preserve"><tspan fill="#e6edf3">and naming things."</tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.35s" dur="0.25s" fill="freeze"/></g>
+    <g opacity="0"><text x="20" y="126" xml:space="preserve"><tspan fill="#6e7681">  — Phil Karlton</tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.47s" dur="0.25s" fill="freeze"/></g>
     <g opacity="0"><text x="20" y="168" xml:space="preserve"><tspan fill="#22d3ee">$ </tspan></text><animate attributeName="opacity" from="0" to="1" begin="1.59s" dur="0.1s" fill="freeze"/></g>
     <rect x="35.8" y="156" width="7.9" height="15" fill="#22d3ee" opacity="0"><animate attributeName="opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" begin="1.69s" dur="1.06s" repeatCount="indefinite"/></rect>
   </g>
