@@ -61,7 +61,9 @@ function chartRaw(days: DayCount[]): Line {
       const mid = Math.floor(days.length / 2);
       const labels = [0, mid, days.length - 1]
         .map((i) => {
-          const anchor = i === 0 ? "start" : i === days.length - 1 ? "end" : "middle";
+          let anchor = "middle";
+          if (i === 0) anchor = "start";
+          else if (i === days.length - 1) anchor = "end";
           return `<text x="${pts[i].x.toFixed(1)}" y="${(yBase + 19).toFixed(1)}" fill="${C.dim}" font-size="11" text-anchor="${anchor}">${dateLabel(days[i].date)}</text>`;
         })
         .join("\n        ");
