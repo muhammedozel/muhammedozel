@@ -14,13 +14,13 @@
 
 ### About Me
 
-- 🏗️ Founder of **[SakaSoft](http://sakasoft.com.tr)** — building digital products
+- 🏗️ Founder of **[SakaSoft](https://sakasoft.com.tr)** — building digital products
 - 💪 Currently building **Gymoz** — gym/fitness management platform (backend, admin, mobile & landing)
 - 🚗 Also shipping smart-city & mobility solutions — parking systems, self-hosted map services
 - 🏙️ Building municipal & smart-city tooling — **InsightOps** & more
 - 💻 Fullstack Developer — React, Nest.js, React Native
 - 📍 Based in **Istanbul, Turkey**
-- 🌐 [muhammedozel.com](http://muhammedozel.com) · ✉️ [muhammed@sakasoft.com.tr](mailto:muhammed@sakasoft.com.tr)
+- 🌐 [muhammedozel.com](https://muhammedozel.com) · ✉️ [muhammed@sakasoft.com.tr](mailto:muhammed@sakasoft.com.tr)
 
 </td>
 <td width="40%" align="center" valign="middle">
@@ -76,7 +76,8 @@
 
 <div align="center">
 
-<img src="assets/terminal-stats.svg" alt="GitHub Stats Terminal" />
+<img height="170" src="assets/github-stats.svg" alt="GitHub Stats" />
+<img height="170" src="assets/github-streak.svg" alt="GitHub Streak" />
 
 </div>
 
@@ -92,8 +93,8 @@
 
 <div align="center">
 <a href="https://www.linkedin.com/in/muhammetozel"><img src="assets/badge-linkedin.svg" alt="LinkedIn" /></a>&nbsp;
-<a href="https://www.twitter.com/arti9muhendis"><img src="assets/badge-twitter.svg" alt="Twitter" /></a>&nbsp;
-<a href="http://www.instagram.com/muhammedozel"><img src="assets/badge-instagram.svg" alt="Instagram" /></a>
+<a href="https://x.com/arti9muhendis"><img src="assets/badge-twitter.svg" alt="Twitter" /></a>&nbsp;
+<a href="https://www.instagram.com/muhammedozel"><img src="assets/badge-instagram.svg" alt="Instagram" /></a>
 </div>
 
 ---
