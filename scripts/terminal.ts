@@ -23,6 +23,7 @@ export const FONT_SIZE = 13;
 export const CHAR_W = 7.9; // 13px monospace yaklaşık karakter genişliği
 export const TOP_PAD = 14;
 export const BOTTOM_PAD = 14;
+export const FONT_FAMILY = "Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace";
 
 export interface Seg {
   t: string;
@@ -49,6 +50,20 @@ export function esc(s: string): string {
 
 export function fmt(n: number): string {
   return n.toLocaleString("en-US");
+}
+
+export function cmd(text: string): Line {
+  return { kind: "cmd", segs: [{ t: "$ ", color: C.cmd }, { t: text, color: C.cmd }] };
+}
+
+export function kv(pairs: [string, string][]): Line {
+  const segs: Seg[] = [];
+  pairs.forEach(([k, v], i) => {
+    if (i > 0) segs.push({ t: "   ", color: C.key });
+    segs.push({ t: `${k}: `, color: C.key });
+    segs.push({ t: v, color: C.val, bold: true });
+  });
+  return { kind: "out", segs };
 }
 
 function tspans(segs: Seg[]): string {
@@ -138,10 +153,10 @@ export function renderTerminal(opts: { title: string; ariaLabel: string; lines: 
     <rect width="${W}" height="${HEADER_H}" fill="${C.headerBg}"/>
     <line x1="0" y1="${HEADER_H}" x2="${W}" y2="${HEADER_H}" stroke="${C.border}" stroke-width="1"/>
     ${dots}
-    <text x="${PAD + 58}" y="${HEADER_H / 2 + 4}" fill="${C.headerText}" font-size="11" font-family="Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace">${esc(title)}</text>
+    <text x="${PAD + 58}" y="${HEADER_H / 2 + 4}" fill="${C.headerText}" font-size="11" font-family="${FONT_FAMILY}">${esc(title)}</text>
   </g>
   <rect x="0.5" y="0.5" width="${W - 1}" height="${height - 1}" rx="10" fill="none" stroke="${C.border}" stroke-width="1"/>
-  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="${FONT_SIZE}">
+  <g font-family="${FONT_FAMILY}" font-size="${FONT_SIZE}">
     ${textEls.join("\n    ")}
   </g>
 </svg>

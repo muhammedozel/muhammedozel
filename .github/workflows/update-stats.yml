@@ -2,12 +2,16 @@ name: Update terminal stats
 
 on:
   schedule:
-    # Günde 3 kez: 08:00, 14:00, 20:00 UTC
-    - cron: "0 8,14,20 * * *"
+    # Günde 1 kez: 08:00 UTC
+    - cron: "0 8 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-stats
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -20,7 +24,7 @@ jobs:
           node-version: 20
 
       - name: Generate SVG
-        run: npx --yes tsx scripts/generate-stats.ts
+        run: npx --yes tsx@4.23.15 scripts/generate-stats.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_LOGIN: muhammedozel
@@ -30,4 +34,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets
-          git diff --cached --quiet || (git commit -m "chore: update terminal stats" && git push)
+          git diff --cached --quiet || (git commit -m "chore: update terminal stats" && git pull --rebase && git push)
