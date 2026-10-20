@@ -1,17 +1,18 @@
 /**
- * GitHub GraphQL API'den profil istatistiklerini çekip animasyonlu SVG kartları üretir:
- *   assets/github-stats.svg       — sayılar + rank halkası (github-readme-stats görünümü)
- *   assets/github-streak.svg      — toplam katkı / güncel seri / en uzun seri
- *   assets/terminal-activity.svg  — son 30 günün katkı grafiği
- *   assets/terminal-quote.svg     — günlük dönen geliştirici sözü ($ fortune --dev)
+ * GitHub GraphQL API'den profil istatistiklerini çekip animasyonlu SVG kartları üretir
+ * (hepsi aynı github_dark görünümünde):
+ *   assets/github-stats.svg     — sayılar + rank halkası (github-readme-stats görünümü)
+ *   assets/github-streak.svg    — toplam katkı / güncel seri / en uzun seri
+ *   assets/github-activity.svg  — son 30 günün katkı grafiği
+ *   assets/github-quote.svg     — günlük dönen geliştirici sözü
  *
- * Çalıştırma: GITHUB_TOKEN=<token> npx tsx scripts/generate-stats.ts
+ * Çalıştırma: GITHUB_TOKEN=<token> npm run generate
  */
 
 import { mkdir, writeFile } from "node:fs/promises";
-import { renderTerminal } from "./terminal";
 import { collectStats } from "./github";
-import { buildActivityLines, buildQuoteLines } from "./cards";
+import { renderActivityCard } from "./activity-card";
+import { renderQuoteCard } from "./quote-card";
 import { renderStatsCard, renderStreakCard } from "./profile-cards";
 
 const LOGIN = process.env.GH_LOGIN ?? "muhammedozel";
@@ -31,22 +32,8 @@ async function main(): Promise<void> {
   const cards: { path: string; svg: string }[] = [
     { path: "assets/github-stats.svg", svg: renderStatsCard(stats, now) },
     { path: "assets/github-streak.svg", svg: renderStreakCard(stats, now) },
-    {
-      path: "assets/terminal-activity.svg",
-      svg: renderTerminal({
-        title: `${LOGIN}@github ~ activity`,
-        ariaLabel: `${LOGIN} son 30 gün katkı grafiği`,
-        lines: buildActivityLines(stats),
-      }),
-    },
-    {
-      path: "assets/terminal-quote.svg",
-      svg: renderTerminal({
-        title: `${LOGIN}@github ~ fortune`,
-        ariaLabel: "Günün geliştirici sözü",
-        lines: buildQuoteLines(now),
-      }),
-    },
+    { path: "assets/github-activity.svg", svg: renderActivityCard(stats) },
+    { path: "assets/github-quote.svg", svg: renderQuoteCard(now) },
   ];
 
   await mkdir("assets", { recursive: true });

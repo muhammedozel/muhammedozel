@@ -5,27 +5,26 @@
  * Harici servis yok; veri scripts/github.ts'ten gelir.
  */
 
-import { esc, fmt } from "./terminal";
+import { THEME, esc, fmt } from "./card-kit";
 import type { Stats, Streak } from "./github";
 
 const CARD_H = 195;
 
-// github_dark paleti (referans kartlardan)
 const STATS_THEME = {
-  bg: "#0D1117",
-  border: "#e4e2e2",
-  title: "#58A6FF",
-  text: "#C3D1D9",
-  icon: "#1F6FEB",
-  ring: "#58A6FF",
+  bg: THEME.bg,
+  border: THEME.border,
+  title: THEME.title,
+  text: THEME.text,
+  icon: THEME.icon,
+  ring: THEME.title,
 } as const;
 
 const STREAK_THEME = {
-  bg: "#0D1117",
-  border: "#39D353",
-  text: "#FFFFFF",
-  accent: "#39D353",
-  fire: "#1F6FEB",
+  bg: THEME.bg,
+  border: THEME.accent,
+  text: THEME.white,
+  accent: THEME.accent,
+  fire: THEME.icon,
 } as const;
 
 // ---------- Rank ----------

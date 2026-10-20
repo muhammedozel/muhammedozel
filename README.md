@@ -86,7 +86,7 @@
 <h3 align="center">Contribution Activity</h3>
 
 <div align="center">
-<img src="assets/terminal-activity.svg" alt="Contribution Activity" />
+<img width="842" src="assets/github-activity.svg" alt="Contribution Activity" />
 </div>
 
 ---
@@ -100,5 +100,5 @@
 ---
 
 <div align="center">
-<img src="assets/terminal-quote.svg" alt="Dev Quote" />
+<img width="842" src="assets/github-quote.svg" alt="Dev Quote" />
 </div>
