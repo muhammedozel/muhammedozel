@@ -8,6 +8,7 @@
  * Çalıştırma: GITHUB_TOKEN=<token> npx tsx scripts/generate-stats.ts
  */
 
+import { mkdir, writeFile } from "node:fs/promises";
 import { renderTerminal } from "./terminal";
 import { collectStats } from "./github";
 import { buildActivityLines, buildQuoteLines } from "./cards";
@@ -48,7 +49,6 @@ async function main(): Promise<void> {
     },
   ];
 
-  const { writeFile, mkdir } = await import("node:fs/promises");
   await mkdir("assets", { recursive: true });
   for (const card of cards) {
     await writeFile(card.path, card.svg, "utf8");
