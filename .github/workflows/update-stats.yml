@@ -22,9 +22,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npm run typecheck
 
       - name: Generate SVG
-        run: npx --yes tsx@4.23.15 scripts/generate-stats.ts
+        run: npm run generate
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_LOGIN: muhammedozel

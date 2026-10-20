@@ -1,0 +1,17 @@
+{
+  "name": "muhammedozel-profile",
+  "private": true,
+  "description": "GitHub profil README'sindeki SVG kartlarını üreten scriptler",
+  "scripts": {
+    "generate": "tsx scripts/generate-stats.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.43",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
