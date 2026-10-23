@@ -52,22 +52,22 @@
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=react,nextjs,vue,nuxt,tailwind,materialui,redux&theme=dark" /><br/>
-<sub><b>Frontend</b> — React / Next.js / Vue / Nuxt.js / TailwindCSS</sub>
+<sub><b>Frontend</b> — React / Next.js / Vue / Nuxt.js / TailwindCSS / Material UI / Redux</sub>
 </p>
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=nodejs,nestjs,ts,graphql,postgresql,mongodb,redis&theme=dark" /><br/>
-<sub><b>Backend</b> — Node.js / Nest.js / TypeScript / GraphQL</sub>
+<sub><b>Backend</b> — Node.js / Nest.js / TypeScript / GraphQL / PostgreSQL / MongoDB / Redis</sub>
 </p>
 
 <p align="center">
-<img src="https://skillicons.dev/icons?i=react,androidstudio,figma&theme=dark" /><br/>
+<img src="https://skillicons.dev/icons?i=react,expo,figma&theme=dark" /><br/>
 <sub><b>Mobile & Design</b> — React Native / Expo / Figma</sub>
 </p>
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=docker,aws,vercel,githubactions,nginx,linux&theme=dark" /><br/>
-<sub><b>DevOps</b> — Docker / AWS / Vercel / Railway / GitHub Actions</sub>
+<sub><b>DevOps</b> — Docker / AWS / Vercel / GitHub Actions / Nginx / Linux</sub>
 </p>
 
 ---
@@ -87,6 +87,29 @@
 
 <div align="center">
 <img width="842" src="assets/github-activity.svg" alt="Contribution Activity" />
+</div>
+
+---
+
+<h3 align="center">Contribution Snake</h3>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhammedozel/muhammedozel/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhammedozel/muhammedozel/output/github-contribution-grid-snake.svg" />
+    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/muhammedozel/muhammedozel/output/github-contribution-grid-snake.svg" />
+  </picture>
+</div>
+
+---
+
+<h3 align="center">Trophies</h3>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=muhammedozel&theme=flat&no-frame=true&no-bg=true&margin-w=4&column=7" />
+    <img src="https://github-profile-trophy.vercel.app/?username=muhammedozel&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" alt="GitHub Trophies" />
+  </picture>
 </div>
 
 ---
