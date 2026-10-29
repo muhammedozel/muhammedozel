@@ -1,6 +1,6 @@
 <svg xmlns='http://www.w3.org/2000/svg' style='isolation: isolate' viewBox='0 0 495 195' width='495px' height='195px' direction='ltr' role='img' aria-labelledby='streakTitle streakDesc'>
   <title id='streakTitle'>Muhammed Özel's GitHub Streak</title>
-  <desc id='streakDesc'>Total Contributions: 20262, Current Streak: 301 days, Longest Streak: 301 days</desc>
+  <desc id='streakDesc'>Total Contributions: 20276, Current Streak: 301 days, Longest Streak: 301 days</desc>
   <style>
     @keyframes currstreak {
       0% { font-size: 3px; opacity: 0.2; }
@@ -25,7 +25,7 @@
     <line x1='330' y1='28' x2='330' y2='170' stroke-width='1' stroke='#39D353'/>
     <g>
       <g transform='translate(82.5, 48)'>
-        <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#FFFFFF' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='28px' style='opacity: 0; animation: fadein 0.5s linear forwards 0.6s'>20,262</text>
+        <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#FFFFFF' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='28px' style='opacity: 0; animation: fadein 0.5s linear forwards 0.6s'>20,276</text>
       </g>
       <g transform='translate(82.5, 84)'>
         <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#FFFFFF' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='400' font-size='14px' style='opacity: 0; animation: fadein 0.5s linear forwards 0.7s'>Total Contributions</text>
