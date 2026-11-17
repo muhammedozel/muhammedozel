@@ -1,6 +1,6 @@
 <svg width="962" height="280" viewBox="0 0 962 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId descId">
   <title id="titleId">Muhammed Özel's Contribution Activity</title>
-  <desc id="descId">Last 30 days: max 623/day, avg 174.9/day, active 29/30 days</desc>
+  <desc id="descId">Last 30 days: max 628/day, avg 177.9/day, active 29/30 days</desc>
   <style>
     .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #58A6FF; animation: fadeInAnimation 0.8s ease-in-out forwards; }
     .sub { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8B949E; }
@@ -9,7 +9,7 @@
     .day { font: 400 9px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8B949E; paint-order: stroke; stroke: #0D1117; stroke-width: 3px; stroke-linejoin: round; }
     .date { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8B949E; }
     .stagger { opacity: 0; animation: fadeInAnimation 0.3s ease-in-out forwards; }
-    .line { stroke-dasharray: 1210; stroke-dashoffset: 1210; animation: drawAnimation 1.4s ease-in-out 0.4s forwards; }
+    .line { stroke-dasharray: 1191; stroke-dashoffset: 1191; animation: drawAnimation 1.4s ease-in-out 0.4s forwards; }
     .area { opacity: 0; animation: areaAnimation 0.5s ease-in-out 1.3s forwards; }
     .late { opacity: 0; animation: fadeInAnimation 0.4s ease-in-out 1.7s forwards; }
     @keyframes drawAnimation { to { stroke-dashoffset: 0; } }
@@ -24,54 +24,54 @@
     <line x1="25" y1="122.0" x2="937" y2="122.0" stroke="#e4e2e2" stroke-opacity="0.25" stroke-dasharray="3 5"/>
     <line x1="25" y1="97.0" x2="937" y2="97.0" stroke="#e4e2e2" stroke-opacity="0.25" stroke-dasharray="3 5"/>
     <line x1="25" y1="172" x2="937" y2="172" stroke="#e4e2e2" stroke-opacity="0.5"/>
-    <path class="area" d="M25.0 169.0 L56.4 134.4 L87.9 145.0 L119.3 97.8 L150.8 123.7 L182.2 103.3 L213.7 139.7 L245.1 151.5 L276.6 92.1 L308.0 150.3 L339.5 164.6 L370.9 170.7 L402.4 163.2 L433.8 157.9 L465.3 171.4 L496.7 169.9 L528.2 171.4 L559.6 170.7 L591.1 169.9 L622.5 72.0 L654.0 118.5 L685.4 105.1 L716.9 106.7 L748.3 141.2 L779.8 154.8 L811.2 127.9 L842.7 161.9 L874.1 171.5 L905.6 169.8 L937.0 172.0 L937.0 172 L25 172 Z" fill="#58A6FF"/>
-    <path class="line" d="M25.0 169.0 L56.4 134.4 L87.9 145.0 L119.3 97.8 L150.8 123.7 L182.2 103.3 L213.7 139.7 L245.1 151.5 L276.6 92.1 L308.0 150.3 L339.5 164.6 L370.9 170.7 L402.4 163.2 L433.8 157.9 L465.3 171.4 L496.7 169.9 L528.2 171.4 L559.6 170.7 L591.1 169.9 L622.5 72.0 L654.0 118.5 L685.4 105.1 L716.9 106.7 L748.3 141.2 L779.8 154.8 L811.2 127.9 L842.7 161.9 L874.1 171.5 L905.6 169.8 L937.0 172.0" stroke="#58A6FF" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-    <circle class="late" cx="622.5" cy="72.0" r="4" fill="#39D353"/>
+    <path class="area" d="M25.0 134.7 L56.4 145.2 L87.9 98.4 L119.3 124.1 L150.8 103.5 L182.2 139.4 L213.7 151.3 L245.1 90.9 L276.6 141.4 L308.0 163.4 L339.5 170.7 L370.9 163.2 L402.4 158.0 L433.8 171.4 L465.3 169.9 L496.7 171.4 L528.2 169.5 L559.6 169.0 L591.1 72.0 L622.5 119.0 L654.0 105.6 L685.4 107.2 L716.9 141.4 L748.3 155.0 L779.8 128.2 L811.2 162.0 L842.7 171.5 L874.1 169.8 L905.6 171.2 L937.0 172.0 L937.0 172 L25 172 Z" fill="#58A6FF"/>
+    <path class="line" d="M25.0 134.7 L56.4 145.2 L87.9 98.4 L119.3 124.1 L150.8 103.5 L182.2 139.4 L213.7 151.3 L245.1 90.9 L276.6 141.4 L308.0 163.4 L339.5 170.7 L370.9 163.2 L402.4 158.0 L433.8 171.4 L465.3 169.9 L496.7 171.4 L528.2 169.5 L559.6 169.0 L591.1 72.0 L622.5 119.0 L654.0 105.6 L685.4 107.2 L716.9 141.4 L748.3 155.0 L779.8 128.2 L811.2 162.0 L842.7 171.5 L874.1 169.8 L905.6 171.2 L937.0 172.0" stroke="#58A6FF" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle class="late" cx="591.1" cy="72.0" r="4" fill="#39D353"/>
     <g class="late">
-      <text class="day" x="25.0" y="160.0" text-anchor="middle">19</text>
-      <text class="day" x="56.4" y="125.4" text-anchor="middle">234</text>
-      <text class="day" x="87.9" y="136.0" text-anchor="middle">168</text>
-      <text class="day" x="119.3" y="88.8" text-anchor="middle">462</text>
-      <text class="day" x="150.8" y="114.7" text-anchor="middle">301</text>
-      <text class="day" x="182.2" y="94.3" text-anchor="middle">428</text>
-      <text class="day" x="213.7" y="130.7" text-anchor="middle">201</text>
-      <text class="day" x="245.1" y="142.5" text-anchor="middle">128</text>
-      <text class="day" x="276.6" y="83.1" text-anchor="middle">498</text>
-      <text class="day" x="308.0" y="141.3" text-anchor="middle">135</text>
-      <text class="day" x="339.5" y="155.6" text-anchor="middle">46</text>
-      <text class="day" x="370.9" y="161.7" text-anchor="middle">8</text>
-      <text class="day" x="402.4" y="154.2" text-anchor="middle">55</text>
-      <text class="day" x="433.8" y="148.9" text-anchor="middle">88</text>
-      <text class="day" x="465.3" y="162.4" text-anchor="middle">4</text>
-      <text class="day" x="496.7" y="160.9" text-anchor="middle">13</text>
-      <text class="day" x="528.2" y="162.4" text-anchor="middle">4</text>
-      <text class="day" x="559.6" y="161.7" text-anchor="middle">8</text>
-      <text class="day" x="591.1" y="160.9" text-anchor="middle">13</text>
-      <text class="day" x="622.5" y="63.0" text-anchor="middle">623</text>
-      <text class="day" x="654.0" y="109.5" text-anchor="middle">333</text>
-      <text class="day" x="685.4" y="96.1" text-anchor="middle">417</text>
-      <text class="day" x="716.9" y="97.7" text-anchor="middle">407</text>
-      <text class="day" x="748.3" y="132.2" text-anchor="middle">192</text>
-      <text class="day" x="779.8" y="145.8" text-anchor="middle">107</text>
-      <text class="day" x="811.2" y="118.9" text-anchor="middle">275</text>
-      <text class="day" x="842.7" y="152.9" text-anchor="middle">63</text>
-      <text class="day" x="874.1" y="162.5" text-anchor="middle">3</text>
-      <text class="day" x="905.6" y="160.8" text-anchor="middle">14</text>
+      <text class="day" x="25.0" y="125.7" text-anchor="middle">234</text>
+      <text class="day" x="56.4" y="136.2" text-anchor="middle">168</text>
+      <text class="day" x="87.9" y="89.4" text-anchor="middle">462</text>
+      <text class="day" x="119.3" y="115.1" text-anchor="middle">301</text>
+      <text class="day" x="150.8" y="94.5" text-anchor="middle">430</text>
+      <text class="day" x="182.2" y="130.4" text-anchor="middle">205</text>
+      <text class="day" x="213.7" y="142.3" text-anchor="middle">130</text>
+      <text class="day" x="245.1" y="81.9" text-anchor="middle">509</text>
+      <text class="day" x="276.6" y="132.4" text-anchor="middle">192</text>
+      <text class="day" x="308.0" y="154.4" text-anchor="middle">54</text>
+      <text class="day" x="339.5" y="161.7" text-anchor="middle">8</text>
+      <text class="day" x="370.9" y="154.2" text-anchor="middle">55</text>
+      <text class="day" x="402.4" y="149.0" text-anchor="middle">88</text>
+      <text class="day" x="433.8" y="162.4" text-anchor="middle">4</text>
+      <text class="day" x="465.3" y="160.9" text-anchor="middle">13</text>
+      <text class="day" x="496.7" y="162.4" text-anchor="middle">4</text>
+      <text class="day" x="528.2" y="160.5" text-anchor="middle">16</text>
+      <text class="day" x="559.6" y="160.0" text-anchor="middle">19</text>
+      <text class="day" x="591.1" y="63.0" text-anchor="middle">628</text>
+      <text class="day" x="622.5" y="110.0" text-anchor="middle">333</text>
+      <text class="day" x="654.0" y="96.6" text-anchor="middle">417</text>
+      <text class="day" x="685.4" y="98.2" text-anchor="middle">407</text>
+      <text class="day" x="716.9" y="132.4" text-anchor="middle">192</text>
+      <text class="day" x="748.3" y="146.0" text-anchor="middle">107</text>
+      <text class="day" x="779.8" y="119.2" text-anchor="middle">275</text>
+      <text class="day" x="811.2" y="153.0" text-anchor="middle">63</text>
+      <text class="day" x="842.7" y="162.5" text-anchor="middle">3</text>
+      <text class="day" x="874.1" y="160.8" text-anchor="middle">14</text>
+      <text class="day" x="905.6" y="162.2" text-anchor="middle">5</text>
       <text class="day" x="937.0" y="163.0" text-anchor="middle">0</text>
     </g>
-    <text class="date" x="25.0" y="191" text-anchor="start">Oct 18</text>
-    <text class="date" x="496.7" y="191" text-anchor="middle">Nov 2</text>
-    <text class="date" x="937.0" y="191" text-anchor="end">Nov 16</text>
+    <text class="date" x="25.0" y="191" text-anchor="start">Oct 19</text>
+    <text class="date" x="496.7" y="191" text-anchor="middle">Nov 3</text>
+    <text class="date" x="937.0" y="191" text-anchor="end">Nov 17</text>
   </g>
   <line x1="25" y1="206" x2="937" y2="206" stroke="#e4e2e2" stroke-opacity="0.35"/>
   <line x1="320.6666666666667" y1="218" x2="320.6666666666667" y2="266" stroke="#e4e2e2" stroke-opacity="0.35"/>
     <line x1="641.3333333333334" y1="218" x2="641.3333333333334" y2="266" stroke="#e4e2e2" stroke-opacity="0.35"/>
   <g class="stagger" style="animation-delay: 450ms">
-      <text class="num" x="160.3" y="242" text-anchor="middle">623</text>
+      <text class="num" x="160.3" y="242" text-anchor="middle">628</text>
       <text class="lbl" x="160.3" y="262" text-anchor="middle">Max / day</text>
     </g>
     <g class="stagger" style="animation-delay: 600ms">
-      <text class="num" x="481.0" y="242" text-anchor="middle">174.9</text>
+      <text class="num" x="481.0" y="242" text-anchor="middle">177.9</text>
       <text class="lbl" x="481.0" y="262" text-anchor="middle">Avg / day</text>
     </g>
     <g class="stagger" style="animation-delay: 750ms">
