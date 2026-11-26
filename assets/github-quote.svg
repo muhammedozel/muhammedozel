@@ -1,6 +1,6 @@
 <svg width="962" height="134" viewBox="0 0 962 134" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId descId">
   <title id="titleId">Dev Quote of the Day</title>
-  <desc id="descId">"Weeks of coding can save you hours of planning." — Unknown</desc>
+  <desc id="descId">"Testing leads to failure, and failure leads to understanding." — Burt Rutan</desc>
   <style>
     .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #58A6FF; animation: fadeInAnimation 0.8s ease-in-out forwards; }
     .quote { font: italic 400 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #C3D1D9; }
@@ -11,6 +11,6 @@
   <rect x="0.5" y="0.5" rx="4.5" width="961" height="133" stroke="#e4e2e2" fill="#0D1117"/>
   <text x="25" y="35" class="header">Dev Quote of the Day</text>
   <rect x="25" y="56" width="3" height="58" rx="1.5" fill="#39D353" opacity="0.8"/>
-  <text class="quote stagger" style="animation-delay: 450ms" x="45" y="76">"Weeks of coding can save you hours of planning."</text>
-  <text class="author stagger" style="animation-delay: 600ms" x="45" y="108">— Unknown</text>
+  <text class="quote stagger" style="animation-delay: 450ms" x="45" y="76">"Testing leads to failure, and failure leads to understanding."</text>
+  <text class="author stagger" style="animation-delay: 600ms" x="45" y="108">— Burt Rutan</text>
 </svg>
